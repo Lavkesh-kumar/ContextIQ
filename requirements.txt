@@ -1,0 +1,16 @@
+openvino==2026.0.0
+openvino-genai
+fastapi
+uvicorn[standard]
+python-multipart
+streamlit
+requests
+faiss-cpu
+numpy
+pandas
+rdflib
+pymupdf
+python-docx
+python-pptx
+sentence-transformers
+langchain-text-splitters
