@@ -77,7 +77,7 @@ ContextIQ/
 ### Step 1 — Clone the repository
 
 ```bash
-git clone https://github.com/satheeshbhukya/ContextIQ.git
+git clone https://github.com/Lavkesh-kumar/ContextIQ.gits
 cd ContextIQ
 ```
 
