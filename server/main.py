@@ -73,8 +73,8 @@ class _AppState:
     def get_rag_engine(self) -> RAGEngine:
         with self.lock:
             if self.rag_engine is None:
-                # Default path updated for Windows local run
-                model_path = os.getenv("CONTEXTIQ_MODEL_PATH", "./model/phi-3-openvino")
+                _here = os.path.dirname(os.path.abspath(__file__))
+                model_path = os.getenv("CONTEXTIQ_MODEL_PATH", os.path.join(_here, "..", "model", "phi-3-openvino"))
                 device = os.getenv("CONTEXTIQ_DEVICE", "CPU")
                 max_tokens = int(os.getenv("CONTEXTIQ_MAX_NEW_TOKENS", "512"))
                 self.rag_engine = RAGEngine(model_path=model_path, device=device, max_tokens=max_tokens)
